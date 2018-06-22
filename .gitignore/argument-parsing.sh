@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function usuage() {
+function usage() {
   echo "Usage"
 }
 
@@ -8,7 +8,7 @@ while ! [ "$#" = "0" ]; do
     ARG="$1"
     case $ARG in
         -h | --help)
-            usuage
+            usage
             exit
             ;;
         --all)
@@ -20,7 +20,7 @@ while ! [ "$#" = "0" ]; do
             ;;
         *)
             echo "ERROR: Unknown parameter \"$PARAM\""
-            usuage
+            usage
             exit 1
             ;;
     esac
